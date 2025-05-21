@@ -1,0 +1,76 @@
+# Version control
+.git/
+.gitignore
+.github/
+.git-*
+
+# Node.js (Frontend)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm/
+.yarn/
+Frontend/node_modules/
+Frontend/build/
+Frontend/dist/
+Frontend/.next/
+Frontend/coverage/
+Frontend/.cache/
+
+# Python (Backend)
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.env
+.venv/
+Backend/__pycache__/
+Backend/*.py[cod]
+Backend/env/
+Backend/venv/
+Backend/.env
+Backend/.venv/
+Backend/.pytest_cache/
+Backend/.coverage
+Backend/htmlcov/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Logs and databases
+*.log
+*.sqlite3
+*.db
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# Docker specific
+.dockerignore
+*/Dockerfile
+docker-compose*.yml
+
+# Temporary and system files
+.tmp/
+.temp/
+tmp/
+temp/
+*.tmp
+*.temp
+*.bak
+~*
+*~
+._*
+*#
