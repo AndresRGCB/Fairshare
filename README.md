@@ -1,66 +1,60 @@
-# FairShare
+# 💸 FairShare – A Daily Dashboard for Personal Finance
 
-A financial expense tracking and management application built with FastAPI backend and React frontend.
+**FairShare** is a full-stack web application that helps users manage single expenses, recurring expenses, and installment payments. Unlike traditional finance tools, FairShare provides a daily dashboard that lets users track their savings goals one day at a time.
 
-## Project Structure
+---
 
-- **Backend**: FastAPI application with PostgreSQL database
-- **Frontend**: React application
+## 🌟 Features
 
-## Features
+- ✅ **Daily goal tracking** for better savings habits
+- 🔁 Manage **recurring** and **installment** expenses
+- 📱 **Responsive UI** for both desktop and mobile
+- 🔒 **Secure authentication** with JWT tokens
+- ⚡ **Redis caching** for faster backend performance
+- 🗃️ **PostgreSQL** with indexed tables for efficiency
+- 🐳 Fully **containerized with Docker**
+- ☁️ Deployed on **AWS EC2**, managed with **Nginx**
 
-- User authentication and account management
-- Expense tracking and categorization
-- Recurring expenses management
-- Installment expense tracking
-- Data visualization and analytics
-- Label-based organization
+---
 
-## Getting Started
+## 🧰 Tech Stack
 
-### Prerequisites
+| Layer       | Technology |
+|-------------|------------|
+| Frontend    | React, Tailwind CSS |
+| Backend     | FastAPI, Python |
+| Database    | PostgreSQL |
+| Caching     | Redis |
+| Auth        | JWT |
+| Deployment  | Docker, Nginx, AWS EC2 |
 
-- Docker and Docker Compose
-- Git
+---
 
-### Installation
+## 🚀 Live Demo
 
-1. Clone the repository:
-   ```
-   git clone https://github.com/yourusername/fairshare.git
-   cd fairshare
-   ```
+🔗 [Visit FairShare Live](http://18.221.47.86/)
 
-2. Start the application:
-   ```
-   docker-compose up -d
-   ```
+---
 
-3. Access the application:
-   - Frontend: http://localhost:3000
-   - Backend API: http://localhost:8000
+## 📂 Repositories
 
-## Development
+- 🖥️ [Frontend](https://lnkd.in/g8GvuDBx)
+- 🔧 [Backend](https://lnkd.in/gGWTVEAK)
 
-### Backend
+---
 
-The backend is built with FastAPI and uses:
-- PostgreSQL for database
-- SQLAlchemy for ORM
-- Alembic for migrations
-- Redis for caching
+## 📌 Motivation
 
-### Frontend
+FairShare allowed me to bring together frontend and backend skills in a production-like environment. I developed secure APIs, managed backend performance with Redis, and deployed the full stack using Docker and AWS. It was a valuable exercise in architecture, scaling, and DevOps.
 
-The frontend is built with React and uses:
-- React Router for navigation
-- Modern UI components
-- Responsive design
+---
 
-## Deployment
+## 🙌 Feedback
 
-The application can be deployed using Docker Compose on any server that supports Docker.
+If you have any suggestions or questions, feel free to open an issue or reach out!
 
-## License
+---
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 🏷️ Tags
+
+`#fullstack` `#fastapi` `#react` `#aws` `#docker` `#postgresql` `#redis` `#personalfinance`
