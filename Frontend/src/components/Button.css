@@ -1,0 +1,27 @@
+.button {
+    padding: 0.5rem 1rem;
+    display: "block";
+    background-color: #012a8e;
+    border-color: white;
+    color: white;
+    border: none; /* Ensure no border styling is applied */
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 120%;
+    transition: background-color 0.3s ease;
+    display: block; /* Makes the button behave like a block element */
+    margin: 0 auto; /* Horizontally center the button */
+    text-align: center; /* Ensure text inside is centered */
+  }
+  
+  .button:hover {
+    background-color: #4287f5;
+
+  }
+
+  @media (max-width: 600px) {
+    .button {
+      font-size: 90%; /* Reduce font size for small screens */
+    }
+  }
+  

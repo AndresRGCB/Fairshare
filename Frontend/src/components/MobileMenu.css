@@ -1,0 +1,173 @@
+/* 🔹 Mobile Navbar */
+.mobile-menu-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  z-index: 1000;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Navbar Sections */
+.mobile-menu-navbar-section {
+  display: flex;
+  align-items: center;
+}
+
+.mobile-menu-navbar-section.left {
+  flex: 1;
+  justify-content: flex-start;
+}
+
+.mobile-menu-navbar-section.center {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.mobile-menu-navbar-section.right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
+}
+
+/* 🔹 Hamburger Button */
+.mobile-menu-hamburger-btn {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 🔹 Hamburger Icon */
+.mobile-menu-hamburger-btn svg {
+  width: 32px;
+  height: 32px;
+  fill: black;
+  stroke: black;
+}
+
+/* 🔹 Mobile Menu */
+.mobile-menu {
+  position: fixed;
+  top: -70px; /* below navbar */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 80px); /* remaining height */
+  background: #111827;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* center vertically */
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 999;
+  border-radius: 0 0 10px 10px;
+  overflow-y: auto;
+}
+
+/* 🔹 When Menu is Open */
+.mobile-menu.open {
+  transform: translateY(0);
+}
+
+/* 🔹 Logo */
+.mobile-menu-logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mobile-menu-logo-img {
+  width: 250px;
+  height: auto;
+}
+
+/* 🔹 Menu Items Container */
+.mobile-menu-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 12px;
+}
+
+/* 🔹 Top and Bottom Sections */
+.mobile-menu-top,
+.mobile-menu-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* 🔹 Divider Line */
+.mobile-menu-divider {
+  width: 70%;
+  height: 1px;
+  background: #374151;
+  margin: 10px 0;
+}
+
+/* 🔹 Menu Item */
+.mobile-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 12px 16px;
+  font-size: 16px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  width: 80%;
+  max-width: 280px;
+  font-weight: 500;
+  background-color: transparent;
+  text-align: center;
+}
+
+/* 🔹 Menu Item Hover */
+.mobile-menu-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* 🔹 Menu Item Icon */
+.mobile-menu-item .mobile-menu-icon {
+  font-size: 18px;
+}
+
+/* 🔹 Menu Item Text */
+.mobile-menu-item span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* 🔹 Responsive Adjustments */
+@media (max-width: 768px) {
+  .mobile-menu-item span {
+    font-size: 30px !important;
+  }
+
+  .mobile-menu-item .mobile-menu-icon {
+    font-size: 30px;
+  }
+
+  .mobile-menu-divider {
+    width: 80%;
+  }
+}

@@ -1,0 +1,119 @@
+/* Main Container */
+.dashboard-container {
+  padding: 0; /* Remove padding */
+  width: 95%; /* Full width */
+  margin: 0; /* Remove margin */
+}
+
+/* Header Section */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.dashboard-title {
+  font-size: 400%;
+  font-weight: bold;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+/* Divider */
+.dashboard-divider {
+  height: 1px;
+  background-color: #ffffff;
+  width: 100%;
+  padding-top: 50px;
+}
+
+/* Grid Layout */
+.dashboard-grid {
+  display: grid;
+  width: 100%; /* Full width */
+  margin: 0; /* Remove margin */
+  padding: 0; /* Remove padding */
+}
+
+.dashboard-item {
+  background: white;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  min-width: 100%;
+}
+
+/* New Expense Button */
+.new-expense-button {
+  background-color: #2563eb;
+  color: white;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;  /* Prevent button text from wrapping */
+}
+
+.new-expense-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard-container {
+    width: 85%;  /* Slightly wider on smaller screens */
+  }
+
+  .dashboard-title {
+    font-size: 300%;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .dashboard-title {
+    font-size: 250%;
+  }
+
+  .new-expense-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .dashboard-header {
+    margin: 1.5rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-container {
+    width: 85%;
+  }
+
+  .dashboard-title {
+    font-size: 200%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+
+  .new-expense-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+

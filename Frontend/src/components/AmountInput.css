@@ -1,0 +1,89 @@
+/* 🔹 Input Field Wrapper */
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* 🔥 Fully rounded */
+  box-sizing: border-box;
+  background: white;
+  position: relative;
+}
+
+/* 🔹 Currency Symbol */
+.currency {
+  position: absolute;
+  left: 15px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* 🔹 Input Field */
+.input-wrapper input {
+  width: 100%;
+  padding-left: 35px;
+  padding-right: 50px; /* Space for buttons */
+  height: 20px; /* 🔥 Match button height */
+  font-size: 1.1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/* 🔹 Vertical Toggle Buttons */
+.toggle-buttons {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  height: 100%;
+}
+
+/* 🔹 Plus & Minus Buttons */
+.toggle-btn {
+  width: 50px; /* 🔥 Same height as input */
+  height: 50%;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+  background: #ccc;
+  color: white;
+  border-radius: 0; /* Reset for now */
+}
+
+/* 🔹 Top Button (Rounded on Top-Right) */
+.toggle-btn.plus-btn {
+  border-top-right-radius: 8px; /* 🔥 Matches input */
+}
+
+/* 🔹 Bottom Button (Rounded on Bottom-Right) */
+.toggle-btn.minus-btn {
+  border-bottom-right-radius: 8px; /* 🔥 Matches input */
+}
+
+/* 🔹 Active Plus Button */
+.toggle-btn.plus-btn.active {
+  background: #22c55e;
+  box-shadow: 0 0 4px rgba(34, 197, 94, 0.6);
+}
+
+/* 🔹 Active Minus Button */
+.toggle-btn.minus-btn.active {
+  background: #ef4444;
+  box-shadow: 0 0 4px rgba(239, 68, 68, 0.6);
+}
+
+/* 🔹 Text Color Based on Selection */
+.green-text {
+  color: #22c55e;
+}
+
+.red-text {
+  color: #ef4444;
+}

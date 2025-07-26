@@ -1,0 +1,158 @@
+/* 🔹 Label Dropdown - Matches Modal Inputs */
+.label-dropdown {
+  width: 100%;
+  max-width: 700px; /* Same width as modal inputs */
+  padding: 14px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  background: white;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: space-between;
+}
+
+/* 🔹 Placeholder Text (Aligned Left) */
+.placeholder-text {
+  color: #aaa;
+  font-size: 1.1rem;
+  text-align: left;
+  width: auto; /* ✅ Allows text to size naturally */
+  position: relative; /* ✅ Ensures it stays within the container */
+  padding-left: 5px; /* ✅ Adds a small left margin */
+}
+
+
+/* 🔹 Selected Labels Inside the Field */
+.selected-labels {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+/* 🔹 Label Tags (Inside the Input) */
+.label-tag {
+  padding: 6px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* 🔹 Remove Label Button */
+.remove-btn {
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+/* 🔹 Dropdown Arrow */
+.dropdown-arrow {
+  font-size: 1.2rem;
+  color: #666;
+  transition: transform 0.3s ease;
+}
+
+/* 🔹 Rotate Arrow When Open */
+.label-dropdown.open .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+/* 🔹 Dropdown Menu */
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 3px;
+  padding: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* 🔹 Dropdown Items */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.dropdown-item:hover {
+  background: #f0f0f0;
+}
+
+/* 🔹 Color Dot for Labels */
+.color-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+/* 🔹 Divider */
+.dropdown-divider {
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  margin: 10px 0;
+}
+
+/* 🔹 Add New Label Section */
+.add-label {
+  display: flex;
+  gap: 5px;
+  padding: 5px;
+}
+
+.new-label-input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+.add-btn {
+  background: #22c55e;
+  color: white;
+  padding: 5px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+/* 🔹 Responsive Styles */
+@media (max-width: 768px) {
+  .label-dropdown {
+    max-width: 100%;
+  }
+
+  .label-tag {
+    font-size: 0.9rem;
+  }
+
+  .dropdown-item {
+    font-size: 0.9rem;
+  }
+}

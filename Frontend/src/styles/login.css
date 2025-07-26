@@ -1,0 +1,145 @@
+/* Parent container */
+.login-container {
+  display: flex;
+  height: 100vh;
+  background: radial-gradient(circle at top right, #dbe3f2, #e9ecef);
+}
+
+/* Left column (default 60% width) */
+.left-column {
+  flex: 0 0 60%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ✅ Centers all elements horizontally */
+  height: 100vh;
+  width: 100vh !important;
+  position: relative;
+  overflow: hidden; /* Prevents content from going out of bounds */
+}
+
+
+/* Right column */
+.right-column {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  height: 100vh !important;
+  width: 100% !important;
+  text-align: center !important;
+  padding: 0 10% !important;
+  background: linear-gradient(to right, #6a11cb, #2575fc) !important; /* Gradient Background */
+}
+
+.right-column-wrapper {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.right-column-image {
+  display: block !important;
+  width: 200% !important;
+  height: auto !important; /* Maintains aspect ratio */
+  object-fit: contain !important; /* Ensures the whole image is visible */
+  margin: 0 auto !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+  .login-container {
+    flex-direction: column;
+    align-items: center; /* ✅ Ensure everything stays centered */
+  }
+
+  .left-column {
+    flex: 1; /* ✅ Takes the full available height */
+    width: 100% !important;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ Center content horizontally */
+  }
+
+  .right-column {
+    display: none !important; /* ✅ Hide the right column */
+  }
+
+   /* Logo */
+ .logo {
+    align-self: center !important;
+    width: 50%!important;
+  }
+
+  /* Heading */
+  .responsive-heading {
+    font-size: 350% !important;
+    font-weight: bold;
+    margin-bottom: 3%;
+    padding-bottom: 7%; /* ✅ Added bottom padding */
+    text-align: center;
+    font-family: "BRLNSR";
+  }
+}
+
+
+ /* Logo */
+ .logo {
+  width: 30%;
+  min-width: 200px;
+  margin-bottom: 5%;
+  align-self: flex-start;
+}
+
+/* Heading */
+.responsive-heading {
+  font-size: 400%;
+  font-weight: bold;
+  margin-bottom: 3%;
+  padding-bottom: 7%; /* ✅ Added bottom padding */
+  text-align: center;
+  font-family: "BRLNSR";
+}
+
+/* Login form container */
+.login-form-container {
+  text-align: center;
+  padding: 5%;  /* ✅ Adds space inside the container */
+  margin: 3%;   /* ✅ Adds space outside the container */
+}
+
+/* Login form container */
+.signup-container {
+  text-align: center;
+  padding: 4%;  /* ✅ Adds space inside the container */
+  margin: 2%;   /* ✅ Adds space outside the container */
+}
+
+/* Forgot Password */
+.forgot-password {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.forgot-password a {
+  text-decoration: none;
+  color: #007bff;
+  font-size: 100%;
+}
+
+
+/* Switch to Sign Up */
+.switch-auth {
+  margin-top: 1rem;
+  font-size: 100%;
+  color: #666;
+}
+
+.switch-auth a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+}

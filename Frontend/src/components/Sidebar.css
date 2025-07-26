@@ -1,0 +1,230 @@
+/* Sidebar Container */
+.sidebar {
+  width: 250px;
+  min-height: calc(100vh - 80px); /* At least screen height minus padding */
+  height: auto; /* Expands dynamically based on content */
+  max-height: none; /* Allows it to grow with content */
+  background: #111827;
+  color: white;
+  padding: 20px;
+  position: fixed; /* Stays on the left */
+  top: 5%;
+  left: 20px;
+  transform: translateY(3%);
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: width 0.3s ease;
+  overflow-y: auto; /* Enables scrolling if content is too long */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  bottom: 10px; /* Prevents it from being pinned to the bottom */
+}
+
+/* Collapsed Sidebar */
+.sidebar.closed {
+  width: 80px;
+  align-items: center;
+  min-height: calc(100vh - 80px); /* SAME HEIGHT LOGIC as open state */
+  height: auto;
+  max-height: none; /* SAME max-height rule */
+  bottom: 10px;
+}
+
+/* Toggle Button */
+.sidebar-toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+  background: #22c55e;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  border: 2px solid white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 10px;
+  height: 10px;
+  z-index: 10;
+}
+
+.sidebar-toggle-btn:hover {
+  background: #16a34a;
+}
+
+/* Prevent Clipping */
+.sidebar {
+  overflow: visible;
+  position: relative;
+}
+
+/* Sidebar Logo */
+.sidebar-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  margin-bottom: 10px;
+  transition: height 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hide Logo Image when Sidebar is Closed */
+.sidebar.closed .sidebar-logo-container {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  margin: 0;
+}
+
+/* Sidebar Logo Image */
+.sidebar-logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Sidebar Content */
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent any overflow */
+  padding: 0 10px; /* Add padding to content instead of individual items */
+}
+
+/* Sidebar Menu (Top Items) */
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  flex-grow: 1; /* Takes up remaining space to push bottom menu down */
+  padding-top: 10px;
+}
+
+/* Push Top Menu to the Top When Sidebar is Closed */
+.sidebar.closed .sidebar-menu {
+  align-items: center;
+  width: 100%;
+  padding-top: 0;
+}
+
+/* Sidebar Menu Item */
+.sidebar-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Divider - 80% width */
+.sidebar-menu-divider {
+  position: absolute;
+  bottom: 70px; /* Adjust this value to position above bottom menu */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 1px;
+  background: #374151;
+  margin: 0;
+}
+
+/* Bottom Menu */
+.sidebar-bottom-menu {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px; /* Match sidebar padding */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Remove any specific styling for bottom menu items */
+.sidebar-bottom-menu .sidebar-menu-item {
+  padding: 10px 15px; /* Same padding as top menu items */
+}
+
+/* When sidebar is closed */
+.sidebar.closed .sidebar-menu-divider {
+  width: 60%; /* Make divider smaller when sidebar is collapsed */
+}
+
+.sidebar.closed .sidebar-bottom-menu {
+  padding: 0; /* Remove padding when closed for proper centering */
+}
+
+/* Remove all hover effects */
+.sidebar-menu-item:hover {
+  background: none;
+}
+
+/* Sidebar Icons */
+.sidebar-menu-item .sidebar-icon {
+  font-size: 150%;
+  color: white;
+  min-width: 24px;
+  text-align: center;
+}
+
+/* Sidebar Text */
+.sidebar-menu-item span {
+  font-size: 130%;
+  font-family: 'BerlinSansBold', sans-serif;
+  font-weight: 600;
+  color: white;
+  flex-grow: 1;
+  text-align: left;
+}
+
+/* Hide text when sidebar is closed */
+.sidebar.closed .sidebar-menu-item span {
+  display: none;
+}
+
+/* Tooltip for Collapsed Sidebar */
+.sidebar-menu-item .sidebar-tooltip {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #374151;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+}
+
+/* Media query to remove padding on mobile screens */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    padding: 0; /* Remove padding from the sidebar */
+  }
+
+  .sidebar-content {
+    padding: 0; /* Remove padding from sidebar content */
+  }
+
+  .sidebar-menu-item {
+    padding: 0; /* Remove padding from sidebar menu items */
+  }
+
+  .sidebar-bottom-menu {
+    padding: 0; /* Remove padding from bottom menu */
+  }
+
+  .sidebar-logo-container {
+    margin-bottom: 0; /* Remove margin from logo container */
+  }
+}

@@ -1,0 +1,327 @@
+/* 🔹 Apply Berlin Sans FB Regular */
+@import url('https://fonts.cdnfonts.com/css/berlin-sans-fb');
+
+.expenses-table-container {
+  width: 100vw; /* Use viewport width */
+  max-width: 95%; /* Ensure it doesn't overflow */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  font-family: 'Berlin Sans FB', sans-serif;
+  background: white;
+  border-radius: 8px;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+.table-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-body {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table row styles */
+.table-header,
+.table-row {
+  display: grid;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.table-header {
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+  font-weight: 500;
+  color: #64748b;
+  font-size: 0.7rem; /* Reduced font size for headers */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 2px solid #e2e8f0;
+  height: 40px; /* Fixed height for header */
+}
+
+.table-row {
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.9rem;
+  height: 50px; /* Fixed height for rows */
+}
+
+/* Cell styles */
+.table-header span,
+.table-row span {
+  padding: 0.5rem 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+/* Grid layouts for different types */
+.single-type {
+  grid-template-columns: 20% 15% 15% 20% 20% 10%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.recurring-type {
+  grid-template-columns: 25% 20% 20% 25% 10%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.installment-type {
+  grid-template-columns: 20% 15% 15% 15% 25% 10%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Labels styling */
+.labels-container {
+  display: flex;
+  gap: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.label-bubble {
+  padding: 3px 12px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  color: white;
+  white-space: nowrap;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Selects styling */
+.table-controls {
+  width: 100%; /* Full width for controls */
+  padding: 0.5rem 0; /* Add some vertical padding */
+  margin: 0; /* Remove margin */
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 1rem; /* Add separation between dropdowns */
+  box-sizing: border-box;
+}
+
+.date-filter-select,
+.expense-type-select {
+  padding: 8px 12px;
+  font-size: 0.9rem; /* Reduced font size for better readability */
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: 'Berlin Sans FB', sans-serif;
+  min-width: 120px; /* Set a minimum width */
+  max-width: none; /* Allow the dropdown to grow to show all text */
+  width: auto; /* Allow the width to adjust based on content */
+  cursor: pointer;
+}
+
+/* Actions styling */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-icon {
+  color: #ef4444;
+  cursor: pointer;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.pagination-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #e2e8f0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.pagination-dot.active {
+  background-color: #3b82f6;
+}
+
+.status-indicator {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.status-indicator.active {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-indicator.inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Update grid templates for recurring and installment types */
+.table-header.recurring-type,
+.table-row.recurring-type {
+  grid-template-columns: 2fr 1fr 1fr 1fr 2fr 0.5fr;
+}
+
+.table-header.installment-type,
+.table-row.installment-type {
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr 2fr 0.5fr;
+}
+
+/* Add these new media queries for responsive font sizes */
+@media screen and (max-width: 1200px) {
+  .table-header {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .table-header {
+    font-size: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  
+  .table-header span {
+    padding: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .table-header {
+    font-size: 0.55rem;
+    letter-spacing: 0.01em;
+  }
+  
+  .table-header span {
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .table-header {
+    font-size: 0.5rem;
+    letter-spacing: 0;
+  }
+  
+  .table-header span {
+    padding: 0.1rem;
+  }
+}
+
+/* Also adjust the cell padding for better space usage */
+@media screen and (max-width: 992px) {
+  .table-header span,
+  .table-row span {
+    padding: 0.3rem;
+  }
+}
+
+/* Update mobile responsive styles */
+@media screen and (max-width: 1000px) {
+  .expenses-table-container {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+
+  /* Adjust grid columns for mobile */
+  .single-type {
+    grid-template-columns: 25% 20% 20% 25% 10%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .recurring-type {
+    grid-template-columns: 25% 20% 20% 25% 10%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .installment-type {
+    grid-template-columns: 20% 15% 15% 15% 25% 10%;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Adjust cell content for mobile */
+  .table-header span,
+  .table-row span {
+    padding: 0.25rem;
+    font-size: 0.8rem;
+    min-width: 0;
+    width: 100%;
+  }
+
+  /* Make sure the table controls are also full width */
+  .table-controls {
+    width: 100vw;
+    padding: 0.5rem 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    gap: 0.5rem;
+  }
+
+  /* Adjust select inputs for mobile */
+  .date-filter-select,
+  .expense-type-select {
+    max-width: 45%;
+    min-width: auto;
+  }
+}
+
+/* Add even smaller screen breakpoint */
+@media screen and (max-width: 576px) {
+  .table-header span,
+  .table-row span {
+    font-size: 0.7rem;
+    padding: 0.25rem 0;
+  }
+}
+
+.table-controls {
+  width: 100%;
+  padding: 0 0 1rem 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 1rem;
+  box-sizing: border-box;
+}

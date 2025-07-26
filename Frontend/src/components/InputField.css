@@ -1,0 +1,26 @@
+/* Styles for the InputField component */
+.input-container {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.input-field {
+  padding: 2%; /* Increased padding for a better feel */
+  width: 100%; /* Centered and limited width */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 10px; /* Rounded edges */
+  background-color: #e9ecef; /* Desired background color */
+  font-family: "BRLNSR", Arial, sans-serif; /* Custom font with fallback */
+  text-align: left; /* Text aligned to the left inside the input */
+  outline: none; /* Remove default focus outline */
+  color: #333; /* Text color */
+  font-size: 120%; /* Font size */
+}
+
+
+@media (max-width: 600px) {
+  .input-field {
+    font-size: 90%; /* Reduce font size for small screens */
+  }
+}
+  
